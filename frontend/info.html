@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdaptIQ — How It Works</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/info.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">AdaptIQ</a>
+  <a href="dashboard.html" class="btn btn-ghost" style="padding:9px 18px;font-size:0.88rem;">Dashboard</a>
+</nav>
+
+<div class="orb" style="width:380px;height:380px;background:radial-gradient(rgba(16, 185, 129, 0.4), transparent);top:-100px;left:-80px;"></div>
+
+<main class="page-pad info-main">
+
+  <div class="info-hero fade-up">
+    <h1>How <span class="gradient-text">AdaptIQ</span> works</h1>
+    <p>Everything you need to know to get the most out of your sessions.</p>
+  </div>
+
+  <!-- Steps -->
+  <div class="info-sections">
+
+    <div class="info-block card fade-up fade-up-d1">
+      <div class="info-icon" style="background:rgba(139,92,246,0.15);">⌚</div>
+      <div class="info-text">
+        <h2>Step 1 — Wear Your Wristband</h2>
+        <p>Put on your ESP32-based wristband. It measures your <strong>heart rate (BPM)</strong> and <strong>skin temperature</strong> continuously. These signals are sent to AdaptIQ in real time.</p>
+        <div class="info-note">
+          💡 No wristband? AdaptIQ defaults to <em>medium difficulty</em> so you can still practice.
+        </div>
+      </div>
+    </div>
+
+    <div class="info-connector"></div>
+
+    <div class="info-block card fade-up fade-up-d2">
+      <div class="info-icon" style="background:rgba(34,211,238,0.12);">🧠</div>
+      <div class="info-text">
+        <h2>Step 2 — Stress Is Calculated</h2>
+        <p>AdaptIQ uses a simple model to determine your stress level:</p>
+        <div class="stress-table">
+          <div class="stress-row">
+            <span class="stress-badge calm">😌 Calm</span>
+            <span>BPM &lt; 80 &amp; Temp &lt; 25°C → <strong>Hard questions</strong></span>
+          </div>
+          <div class="stress-row">
+            <span class="stress-badge moderate">😐 Moderate</span>
+            <span>Mixed readings → <strong>Medium questions</strong></span>
+          </div>
+          <div class="stress-row">
+            <span class="stress-badge high">😰 Stressed</span>
+            <span>BPM ≥ 80 &amp; Temp ≥ 25°C → <strong>Easy questions</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="info-connector"></div>
+
+    <div class="info-block card fade-up fade-up-d3">
+      <div class="info-icon" style="background:rgba(16,185,129,0.12);">🤖</div>
+      <div class="info-text">
+        <h2>Step 3 — AI Generates Your Question</h2>
+        <p>A local AI model (running entirely on your computer) generates a <strong>unique DSA question</strong> for your difficulty level. It picks a different topic each time and avoids repeating previous questions.</p>
+        <div class="info-note">
+          ⚡ The AI runs locally via Ollama — your data never leaves your machine.
+        </div>
+      </div>
+    </div>
+
+    <div class="info-connector"></div>
+
+    <div class="info-block card fade-up fade-up-d4">
+      <div class="info-icon" style="background:rgba(245,158,11,0.12);">📈</div>
+      <div class="info-text">
+        <h2>Step 4 — Answer &amp; Track Progress</h2>
+        <p>Answer questions by clicking an option. Green means correct, red means wrong — the correct answer is always highlighted. Your <strong>accuracy and Questions Solved count</strong> update on the dashboard after every question.</p>
+        <div class="info-note">
+          🏆 Complete questions to unlock new nodes on your progress tree. Aim for that 100%!
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section fade-up">
+    <h2 class="section-title" style="margin-top:60px">Common questions</h2>
+    <div class="faq-list">
+      <div class="faq-item card">
+        <h3>Do I need the wristband to use AdaptIQ?</h3>
+        <p>No. Without the wristband, AdaptIQ defaults to moderate difficulty (medium questions). You can still practice and track your progress normally.</p>
+      </div>
+      <div class="faq-item card">
+        <h3>Are my answers saved?</h3>
+        <p>Yes — every time you answer a question, AdaptIQ updates your progress. Your Questions Solved and accuracy persist between sessions.</p>
+      </div>
+      <div class="faq-item card">
+        <h3>What topics does AdaptIQ cover?</h3>
+        <p>AdaptIQ covers Data Structures & Algorithms — Arrays, Linked Lists, Trees, Graphs, Dynamic Programming, Sorting, Searching, and more.</p>
+      </div>
+      <div class="faq-item card">
+        <h3>What is the progress tree on the dashboard?</h3>
+        <p>It's a visual journey map — each node represents a question you've answered. Completed nodes turn green, the current node pulses, and future nodes are locked until you reach them.</p>
+      </div>
+    </div>
+  </div>
+
+  <div style="text-align:center;margin-top:50px" class="fade-up">
+    <a href="dashboard.html" class="btn btn-primary" style="font-size:1rem;padding:14px 32px;">
+      Go to Dashboard →
+    </a>
+  </div>
+
+</main>
+
+<script src="js/transitions.js"></script>
+</body>
+</html>

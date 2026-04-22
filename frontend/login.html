@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdaptIQ — Login</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a href="index.html" class="nav-logo">AdaptIQ</a>
+</nav>
+
+<!-- BG orbs -->
+
+
+<main class="auth-wrap">
+
+  <div class="auth-card card fade-up">
+    <div class="auth-logo">AdaptIQ</div>
+    <p class="auth-sub">Your stress-adaptive learning platform</p>
+
+    <!-- Tab toggle -->
+    <div class="auth-tabs">
+      <button class="tab-btn active" id="loginTab" onclick="showTab('login')">Login</button>
+      <button class="tab-btn" id="registerTab" onclick="showTab('register')">Sign Up</button>
+    </div>
+
+    <!-- Error / success messages -->
+    <div id="authMsg" class="auth-msg" style="display:none"></div>
+
+    <!-- Login Form -->
+    <form id="loginForm" class="auth-form" onsubmit="handleLogin(event)">
+      <label>Email</label>
+      <input type="email" id="loginEmail" placeholder="you@example.com" required>
+      <label style="margin-top:16px">Password</label>
+      <input type="password" id="loginPassword" placeholder="••••••••" required>
+      <button type="submit" class="btn btn-primary auth-submit" id="loginBtn">
+        Login →
+      </button>
+    </form>
+
+    <!-- Register Form -->
+    <form id="registerForm" class="auth-form" style="display:none" onsubmit="handleRegister(event)">
+      <label>Username</label>
+      <input type="text" id="regUsername" placeholder="coolcoder42" required>
+      <label style="margin-top:16px">Email</label>
+      <input type="email" id="regEmail" placeholder="you@example.com" required>
+      <label style="margin-top:16px">Password</label>
+      <input type="password" id="regPassword" placeholder="Min 6 characters" required minlength="6">
+      <button type="submit" class="btn btn-primary auth-submit" id="registerBtn">
+        Create Account →
+      </button>
+    </form>
+  </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/transitions.js"></script>
+<script src="js/auth.js"></script>
+</body>
+</html>

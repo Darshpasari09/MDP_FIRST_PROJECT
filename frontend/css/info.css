@@ -1,0 +1,90 @@
+.info-main { max-width: 780px; }
+
+.info-hero {
+  text-align: center;
+  margin-bottom: 56px;
+}
+.info-hero h1 {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 5vw, 2.8rem);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin-bottom: 14px;
+  color: var(--txt);
+}
+
+/* Fixed Gradient text to use the new Emerald & Yellow variables */
+.gradient-text {
+  background: linear-gradient(120deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.info-hero p { color: var(--txt-2); font-size: 1.05rem; }
+
+/* Sections */
+.info-sections { display: flex; flex-direction: column; }
+.info-block {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  padding: 30px;
+}
+
+/* Override any inline dark-theme styles */
+.info-icon {
+  width: 52px; height: 52px;
+  border-radius: var(--r-md);
+  background: #ecfdf5 !important;
+  color: var(--primary) !important;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+.info-text { flex: 1; }
+.info-text h2 { font-size: 1.1rem; font-weight: 700; margin-bottom: 10px; color: var(--txt); }
+.info-text p  { color: var(--txt-2); font-size: 0.92rem; line-height: 1.76; margin-bottom: 12px; }
+.info-text strong { color: var(--primary-d); }
+
+.info-note {
+  background: #f8fafc;
+  border: 1px solid var(--card-border);
+  border-radius: var(--r-sm);
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  color: var(--txt-2);
+  margin-top: 12px;
+}
+
+.info-connector {
+  width: 2px;
+  height: 24px;
+  background: linear-gradient(to bottom, #a7f3d0, transparent);
+  margin: 0 auto;
+}
+
+/* Stress table - Vibrant Mode Theme */
+.stress-table  { display: flex; flex-direction: column; gap: 10px; margin-top: 14px; }
+.stress-row    { display: flex; align-items: center; gap: 14px; font-size: 0.88rem; color: var(--txt-2); }
+.stress-badge  { padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 700;
+                 white-space: nowrap; min-width: 110px; text-align: center; }
+.stress-badge.calm     { background:#ecfdf5; color:#059669; border:1px solid #a7f3d0; }
+.stress-badge.moderate { background:#fef3c7; color:#b45309; border:1px solid #fde68a; }
+.stress-badge.high     { background:#fef2f2; color:#dc2626; border:1px solid #fecaca; }
+
+/* FAQ */
+.faq-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; }
+.faq-item { padding: 24px; }
+.faq-item h3 { font-size: 0.97rem; font-weight: 700; margin-bottom: 10px; color: var(--txt); }
+.faq-item p  { color: var(--txt-2); font-size: 0.88rem; line-height: 1.72; }
+
+@media (max-width: 600px) {
+  .info-block  { flex-direction: column; }
+  .stress-row  { flex-direction: column; align-items: flex-start; }
+}
+
+/* Light mode fix for the huge green glowing orb */
+.orb {
+  opacity: 0.1 !important;
+  filter: blur(40px);
+}

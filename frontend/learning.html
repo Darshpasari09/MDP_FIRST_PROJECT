@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AdaptIQ — Practice</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/animations.css">
+<link rel="stylesheet" href="css/learning.css">
+</head>
+<body>
+
+<nav class="nav">
+  <span class="nav-logo">AdaptIQ</span>
+  <a href="dashboard.html" class="btn btn-ghost" style="padding:9px 18px;font-size:0.88rem;">← Dashboard</a>
+</nav>
+
+
+<main class="learn-layout">
+
+  <div class="question-wrap">
+
+    <!-- Question card -->
+    <div class="q-card card fade-up">
+      <div class="q-number" id="questionNumber">Question</div>
+      <div class="q-text" id="questionText">Loading your question...</div>
+      <div class="q-options" id="options"></div>
+
+      <!-- Result feedback -->
+      <div id="feedback" class="feedback" style="display:none"></div>
+
+      <button class="btn btn-primary next-btn" id="nextBtn" disabled>
+        Next Question →
+      </button>
+    </div>
+
+    <!-- Progress mini bar -->
+    <div class="q-progress-row fade-up fade-up-d2">
+      <div class="q-progress-label">
+        Session: <strong id="sessionSolved">0</strong> answered,
+        <strong id="sessionCorrect">0</strong> correct
+      </div>
+      <div class="q-progress-bar">
+        <div class="q-progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+
+  </div>
+
+</main>
+
+<script src="js/api.js"></script>
+<script src="js/transitions.js"></script>
+<script src="js/learning.js"></script>
+</body>
+</html>

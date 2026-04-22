@@ -1,0 +1,22 @@
+[
+  "Question: Which algorithm detects a cycle in a linked list?",
+  "Question: What is the time complexity of inserting into a max-heap?",
+  "Question: Which collision resolution strategy uses a chaining approach to map each key to an index that contains a linked list of all keys that hash to that index?",
+  "Question: The sliding window technique is best suited for problems involving?",
+  "Question: For a problem that requires computing the nth Fibonacci number, memoization would store the results of which subproblems?",
+  "Question: In an adjacency list representation of a graph, what is the primary data structure used to store nodes and their adjacent edges?",
+  "Question: When using dynamic programming for the 0/1 knapsack problem, which approach would pre-compute and store the results for all possible subproblems before computing the solution?",
+  "Question: What does memoization primarily optimize?",
+  "Question: While heapifying a max-heap, you need to swap elements to ensure the parent is smaller than its child. What is a possible approach to make this process efficient?",
+  "Question: If a binary search tree (BST) has a balanced property where a node's left subtree has nodes less than the node and a node's right subtree has nodes greater than the node, which is the main benefit when searching for a specific value within this BST?",
+  "Question: During the deletion of a node in a binary search tree (BST), if the node has no children, we simply remove it. If the node has one child, we replace it with its child. If the node has two children, we find its inorder successor or predecessor and replace the node with it. However, to find the inorder successor of a node, we should start searching from its",
+  "Question: A graph is represented as an adjacency list and we need to find the shortest path between two vertices.",
+  "Question: A max heap is created with the elements {3, 1, 4}. What operations must be performed to transform this into a min heap?",
+  "Question: Which of the following collision resolution strategies is used in Linear Probing for collision handling in a hash table?",
+  "Question: What representation of a graph would allow for more efficient insertion and deletion of edges?",
+  "Question: Which collision resolution strategy involves replacing the key in the colliding index with a unique value that is a function of the colliding key?",
+  "Question: Binary search on answer (parametric search) is used in which of the following scenarios?",
+  "Question: In a hash table, what happens when two keys hash to the same index?",
+  "Question: What is the primary function of the divide step in the Merge Sort algorithm?",
+  "Question: What is the height of a balanced binary tree with n nodes?"
+]

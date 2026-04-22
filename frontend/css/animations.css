@@ -1,0 +1,58 @@
+/* ── Page transitions ─────────────── */
+@keyframes pageIn {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes pageOut {
+  from { opacity: 1; transform: translateY(0); }
+  to   { opacity: 0; transform: translateY(-14px); }
+}
+body.page-enter { animation: pageIn 0.4s cubic-bezier(0.22,1,0.36,1) forwards; }
+body.page-exit  { animation: pageOut 0.25s ease-in forwards; pointer-events: none; }
+
+/* ── Float ────────────────────────── */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-10px); }
+}
+.float { animation: float 4s ease-in-out infinite; }
+
+/* ── SVG node pulse (current level) ─ */
+@keyframes svgPulse {
+  0%, 100% { opacity: 1; r: 30; }
+  50%       { opacity: 0.6; r: 34; }
+}
+@keyframes ringExpand {
+  0%   { r: 30; opacity: 0.6; }
+  100% { r: 44; opacity: 0; }
+}
+
+/* ── Fade-up stagger ──────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(28px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up    { opacity: 0; animation: fadeUp 0.55s ease forwards; }
+.fade-up-d1 { animation-delay: 0.08s; }
+.fade-up-d2 { animation-delay: 0.18s; }
+.fade-up-d3 { animation-delay: 0.3s; }
+.fade-up-d4 { animation-delay: 0.44s; }
+
+/* ── Shimmer ──────────────────────── */
+@keyframes shimmer {
+  0%   { background-position: -600px 0; }
+  100% { background-position: 600px 0; }
+}
+.shimmer {
+  background: linear-gradient(90deg, #f0f9f3 25%, #d5f5e3 50%, #f0f9f3 75%);
+  background-size: 1200px 100%;
+  animation: shimmer 1.4s infinite linear;
+  border-radius: 8px;
+}
+
+/* ── Pulse ring (used on current level circle) ── */
+@keyframes pulseRing {
+  0%   { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0.5); }
+  70%  { box-shadow: 0 0 0 16px rgba(46, 204, 113, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(46, 204, 113, 0); }
+}

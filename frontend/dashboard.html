@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdaptIQ — Dashboard</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+  <nav class="nav">
+    <span class="nav-logo">AdaptIQ</span>
+    <div class="nav-right">
+      <a href="info.html" class="btn btn-ghost" style="padding:9px 18px;font-size:0.88rem;">How to Use</a>
+      <div class="user-chip" id="userChip">
+        <div class="avatar" id="userAvatar">?</div>
+        <span id="userName">Loading...</span>
+      </div>
+      <button class="btn btn-ghost btn-sm" onclick="logout()">Logout</button>
+    </div>
+  </nav>
+
+  <main class="db-layout page-pad">
+
+    <!-- Stats Row -->
+    <div class="stats-row fade-up fade-up-d1">
+      <div class="stat-card card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statSolved">—</div>
+          <div class="stat-label">Questions Solved</div>
+        </div>
+      </div>
+      <div class="stat-card card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statAccuracy">—</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+      </div>
+      <div class="stat-card card">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statNext">—</div>
+          <div class="stat-label">Next Milestone</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="db-main fade-up fade-up-d2">
+
+      <!-- Question Tree -->
+      <div class="tree-section card">
+        <div class="tree-header">
+          <h2>Your Journey</h2>
+          <p>Complete questions to unlock new milestones</p>
+        </div>
+        <div class="tree-container" id="questionTree">
+          <!-- Rendered by JS -->
+        </div>
+        <button class="btn btn-primary start-btn" onclick="window.navigate('learning.html')">
+          ▶ Start Practice
+        </button>
+      </div>
+
+      <!-- User Info Card -->
+      <div class="info-section">
+        <div class="user-info-card card">
+          <div class="user-avatar-lg" id="userAvatarLg">?</div>
+          <div class="user-info-name" id="userInfoName">—</div>
+          <div class="user-info-email" id="userInfoEmail">—</div>
+          <hr style="border-color:var(--border);margin:20px 0">
+          <div class="quick-stat">
+            <span>Questions Solved</span>
+            <strong id="qsStat">—</strong>
+          </div>
+          <div class="quick-stat">
+            <span>Correct Answers</span>
+            <strong id="caStat">—</strong>
+          </div>
+          <div class="quick-stat">
+            <span>Accuracy</span>
+            <strong id="accStat">—</strong>
+          </div>
+        </div>
+
+        <div class="info-tip card">
+          <h3>💡 How it works</h3>
+          <p>Your wristband sends stress data. The AI picks question difficulty based on your current state. Stay calm —
+            you'll unlock harder challenges!</p>
+          <a href="info.html" class="btn btn-ghost"
+            style="margin-top:16px;width:100%;justify-content:center;font-size:0.88rem;">Full Guide →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+  <main class="db-layout page-pad">
+
+    <!-- Stats Row -->
+    <div class="stats-row fade-up fade-up-d1">
+      <div class="stat-card card">
+        <div class="stat-icon">🎯</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statSolved">—</div>
+          <div class="stat-label">Questions Solved</div>
+        </div>
+      </div>
+      <div class="stat-card card">
+        <div class="stat-icon">✅</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statAccuracy">—</div>
+          <div class="stat-label">Accuracy</div>
+        </div>
+      </div>
+      <div class="stat-card card">
+        <div class="stat-icon">⚡</div>
+        <div class="stat-body">
+          <div class="stat-val" id="statNext">—</div>
+          <div class="stat-label">Next Milestone</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Content (Center Stack) -->
+    <div class="db-main fade-up fade-up-d2">
+
+      <!-- Question Tree (Massive Center View) -->
+      <div class="tree-section card">
+        <div class="tree-header">
+          <h2>Your Journey Map</h2>
+          <p>Follow the track, clear nodes, and unlock mastery</p>
+        </div>
+        <div class="tree-container" id="questionTree">
+          <!-- Rendered by JS -->
+        </div>
+        <button class="btn btn-primary start-btn" onclick="window.navigate('learning.html')">
+          ▶ Enter Focus Mode
+        </button>
+      </div>
+
+      <!-- User Profile & Guide (Two Columns Below Map) -->
+      <div class="info-section">
+        <div class="user-info-card card">
+          <div style="display:flex; align-items:center; gap:24px;">
+            <div class="user-avatar-lg" id="userAvatarLg">?</div>
+            <div>
+              <div class="user-info-name" id="userInfoName">—</div>
+              <div class="user-info-email" id="userInfoEmail">—</div>
+            </div>
+          </div>
+          <div class="user-info-stats">
+            <div class="quick-stat">
+              <span>Questions Solved</span>
+              <strong id="qsStat">—</strong>
+            </div>
+            <div class="quick-stat">
+              <span>Accuracy</span>
+              <strong id="accStat">—</strong>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-tip card">
+          <h3>💡 True Adaptivity</h3>
+          <p>Your wristband transmits biological stress markers in real-time. Breathe deeply, stay calm. The system
+            adapts entirely to your zone.</p>
+          <a href="info.html" class="btn btn-ghost" style="margin-top:20px;width:100%;justify-content:center;">Read the
+            Full Concept →</a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+
+  <script src="js/api.js"></script>
+  <script src="js/transitions.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+
+</html>
